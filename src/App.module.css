@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 .app{
@@ -26,8 +27,11 @@
 .components{
   border: 1px red solid;
   width: 100%;
-  height: 95vh;
+  height: 100%;
   background-color: #DEDFDD;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   z-index: 1;
 }
