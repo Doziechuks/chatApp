@@ -1,0 +1,5 @@
+export const userType = {
+  IS_LOADING: "IS_LOADING",
+  ERROR_MESSAGE: "ERROR_MESSAGE",
+  SET_CURRENT_USER: "SET_CURRENT_USER",
+};
