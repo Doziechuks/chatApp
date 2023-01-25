@@ -5,6 +5,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 1rem;
 }
 .title{
   text-transform: capitalize;
@@ -24,10 +25,19 @@
   border-radius: 0.5rem;
   background-color: lightgrey;
 }
-.forgotpassword{
-  border: 1px red solid;
-  width: 100%;
+.photolabel{
+   width: 100%;
+  outline: none;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  background-color: transparent;
+  border: 1px black solid;
+  border-radius: 0.3rem;
+  margin-bottom: 2rem;
   text-align: center;
-  margin-top: 0.5rem;
   cursor: pointer;
+  color: rgb(135, 134, 134);
+}
+.switchAccount{
+  color: #027b61;
 }
