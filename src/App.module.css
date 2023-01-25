@@ -1,0 +1,34 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.app{
+  border: 1px red solid;
+  height: 100vh;
+  width: 100%;
+  background-color: #DEDFDD;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.background{
+  border: 1px red solid;
+  width: 100%;
+  height: 8rem;
+  background-color: #00A783;
+  position: absolute;
+  top: 0;
+}
+.components{
+  border: 1px red solid;
+  width: 100%;
+  height: 95vh;
+  background-color: #DEDFDD;
+  position: relative;
+  z-index: 1;
+}
+
