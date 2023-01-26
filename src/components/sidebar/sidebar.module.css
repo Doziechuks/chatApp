@@ -5,3 +5,15 @@
   position: relative;
   overflow: hidden;
 }
+
+@media screen and (max-width: 1000px) {
+  .container{
+    flex: 1;
+  }
+}
+@media screen and (max-width: 650px) {
+  .container{
+    flex: 0 0 auto;
+    width: 90%;
+  }
+}

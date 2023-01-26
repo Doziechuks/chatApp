@@ -57,19 +57,19 @@ function App({currentUser, errorMessage, isLoading, setCurrentUser, setErrorMess
             exact
             path="/signin"
             render={() =>
-              currentUser ? <Redirect to="/letstalk" /> : <SigninPage />
+              currentUser ? <Redirect to="/" /> : <SigninPage />
             }
           />
           <Route
             exact
             path="/signup"
             render={() =>
-              currentUser ? <Redirect to="/letstalk" /> : <SignupPage />
+              currentUser ? <Redirect to="/" /> : <SignupPage />
             }
           />
           <Route
             exact
-            path="/letstalk"
+            path="/"
             render={() =>
               !currentUser ? <Redirect to="/signin" /> : <HomePage />
             }

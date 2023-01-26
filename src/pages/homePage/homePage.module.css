@@ -5,3 +5,9 @@
   display: flex;
   background-color: #F0F2F5;
 }
+
+@media screen and (max-width: 650px) {
+  .container{
+    overflow-x: scroll;
+  }
+}
