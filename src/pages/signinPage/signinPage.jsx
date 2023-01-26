@@ -58,7 +58,7 @@ const SigninPage = () => {
     let timerId = setInterval(() => {
       setError("");
     }, 5000);
-    return () => clearTimeout(timerId);
+    return () => clearInterval(timerId);
   }, []);
 
   return (

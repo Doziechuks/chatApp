@@ -1,5 +1,5 @@
 import classes from "./signupPage.module.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useHistory, Link } from "react-router-dom";
 
 import FormInput from "../../components/formInput/formInput.component";
@@ -74,6 +74,13 @@ const SignupPage = () => {
       }
     }
   };
+
+   useEffect(() => {
+     let timerId = setInterval(() => {
+       setError("");
+     }, 5000);
+     return () => clearInterval(timerId);
+   }, []);
 
   return (
     <div className={classes.container}>
