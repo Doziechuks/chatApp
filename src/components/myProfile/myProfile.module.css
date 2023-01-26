@@ -1,0 +1,84 @@
+.container{
+  border: 1px red solid;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-color: #fff;
+  transform: translateX(-100%);
+  transition: all 0.5s ease-in-out;
+}
+.showContainer{
+  transform: translateX(0);
+}
+.myProfileNav{
+  border: 1px red solid;
+  width: 100%;
+  height: 8rem;
+  background-color: #008069;
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
+}
+.profileicon{
+  border: 1px red solid;
+  width: 100%;
+  max-width: 3rem;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon{
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+.profiletitle{
+  border: 1px red solid;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  text-transform: capitalize;
+  color: #fff;
+  font-weight: bold;
+}
+.profileInfo{
+  border: 1px red solid;
+  width: 100%;
+  height: calc(100% - 8rem);
+}
+.background{
+  border: 1px red solid;
+  width: 100%;
+  height: 13rem;
+  background-color: #EAF2F5;
+}
+.profilePhoto{
+  border: 1px red solid;
+  width: 100%;
+  max-width: 8rem;
+  display: block;
+  height: 8rem;
+  border-radius: 50%;
+  object-fit: cover;
+  transform: translateY(-50%);
+  margin: 0 auto;
+}
+.info{
+  border: 1px red solid;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  transform: translateY(-30%);
+}
+.info h4{
+  font-size: 1.7rem;
+  text-transform: capitalize;
+}
+.info p{
+  font-size: 1.4rem;
+}

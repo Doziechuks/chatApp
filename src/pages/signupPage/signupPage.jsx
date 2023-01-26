@@ -112,7 +112,7 @@ const SignupPage = () => {
           type="file"
           id="file"
           isFile
-          onChange={(e) => setPhoto(e.target.value)}
+          onChange={(e) => setPhoto(e.target.files[0])}
           required
         />
         <label htmlFor="file" className={classes.photolabel}>

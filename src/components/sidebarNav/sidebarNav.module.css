@@ -1,0 +1,72 @@
+.container{
+  border: 1px red solid;
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  position: relative;
+}
+.profilePicture{
+  border: 1px red solid;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+.navcontent{
+  border: 1px red solid;
+  width: 100%;
+  max-width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.navcontent h3{
+  text-transform: capitalize;
+  margin-right: 1rem;
+  font-size: 1.3rem;
+}
+.dotBox{
+  width: 2.2rem;
+  height: 2.2rem;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.showBoarder{
+background-color: #D9DBDF;
+  border-radius: 50%;
+}
+.dots{
+  font-size: 1.5rem;
+}
+.profileBox{
+  /* border: 1px red solid; */
+  width: 100%;
+  max-width: 6rem;
+  height: 5rem;
+  padding: 0.5rem;
+  background-color: #fff;
+  border-radius: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  position: absolute;
+  top: 3.5rem;
+  right: 0.5rem;
+  z-index: 1;
+}
+.profileBox div{
+  font-size: 1rem;
+  cursor: pointer;
+}
+.profileBox div:hover{
+  color: #00A783;
+}
