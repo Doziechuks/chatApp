@@ -7,6 +7,7 @@
   justify-content: space-between;
   padding: 0 1rem;
   position: relative;
+  background-color: #F0F2F5;
 }
 .profilePicture{
   border: 1px red solid;

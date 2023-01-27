@@ -11,9 +11,7 @@ import { doc, onSnapshot } from 'firebase/firestore';
 import { db } from '../../firebase/firebaseConfig';
 
 const SidebarFriends = ({currentUser, found, setfoundFriend}) => {
-
   const [friend, setFriend] = useState([]);
-  console.log(found);
 
   useEffect(() => {
     const handleGetChats = () => {
