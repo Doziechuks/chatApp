@@ -2,6 +2,7 @@ import classes from './chatsContainer.module.css';
 
 import ChatNav from '../chatNav/chatNav';
 import ChatTextInput from '../chatTextInput/chatTextInput';
+import MessageBody from '../messageBody/messageBody';
 
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
@@ -15,6 +16,7 @@ const ChatsContainer = ({friend}) => {
       ) : (
         <div className={classes.box}>
           <ChatNav />
+          <MessageBody />
           <ChatTextInput />
         </div>
       )}

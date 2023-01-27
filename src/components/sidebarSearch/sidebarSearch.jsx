@@ -63,6 +63,7 @@ const SidebarSearch = ({ currentUser }) => {
           photoURL: currentUser.photoURL,
           email: currentUser.email,
           createdDate: currentUser.createdDate,
+          combinedId
           },
           [combinedId+'.date']: serverTimestamp(),
           

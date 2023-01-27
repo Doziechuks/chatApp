@@ -18,7 +18,6 @@ const ChatTextInput = ({currentUser, friend}) => {
   const [text, setText] = useState('');
   const [img, setImg] = useState(null);
   const chatId = Date.now().toString();
-  // console.log(friend);
 
   const handleSendMessage = async () => {
     if(text === '' || text.trim() === ''){

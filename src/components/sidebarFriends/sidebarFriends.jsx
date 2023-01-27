@@ -27,17 +27,16 @@ const SidebarFriends = ({currentUser, found, setfoundFriend}) => {
 
   return (
     <div className={classes.container}>
-      {Object.entries(friend).map((myFriend) => {
-        const {photoURL, username} = myFriend[1].friendInfo;
+      { friend && Object.entries(friend).map((myFriend) => {
         return (
           <div className={classes.founduser} key={myFriend[0]} onClick={() => setfoundFriend(myFriend[1].friendInfo)} >
             <img
-              src={photoURL}
+              src={myFriend[1].friendInfo.photoURL}
               alt="photo"
               className={classes.userPhoto}
             />
             <div className={classes.infoBox}>
-              <p>{username}</p>
+              <p>{myFriend[1].friendInfo.username}</p>
               <p className={classes.lastMessage}>last message</p>
             </div>
           </div>

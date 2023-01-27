@@ -25,7 +25,7 @@ const SigninPage = () => {
           await signInWithEmailAndPassword(auth, email, password);
           setEmail("");
           setPassword("");
-          history.push("/letstalk");
+          history.push("/");
         } catch (error) {
           console.log({ error: error.message });
           switch (error.message) {

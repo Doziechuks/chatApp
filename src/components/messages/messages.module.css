@@ -1,0 +1,41 @@
+.container{
+  border: 1px red solid;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.owner{
+  align-items: flex-end;
+}
+.text{
+  border: 1px red solid;
+  width: 100%;
+  max-width: max-content;
+  padding: 0.5rem;
+  border-radius: 0 0.8rem 0.8rem 0.8rem;
+  margin-bottom: 0.5rem;
+  background-color: #fff;
+}
+.owner .text{
+  background-color: #D9FDD3;
+  border-radius: 0.8rem 0.8rem 0rem 0.8rem;
+}
+.photo{
+  border: 1px red solid;
+  width: 100%;
+  max-width: 17rem;
+  height: 20rem;
+  border-radius: 0.3rem;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 900px) {
+  .container{
+    margin-bottom: 1rem;
+  }
+  .photo{
+  max-width: 15rem;
+  height: 18rem;
+}
+}
