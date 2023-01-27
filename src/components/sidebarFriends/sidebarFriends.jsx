@@ -5,13 +5,15 @@ import { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { selectCurrentUser } from '../../redux/user/userSelector';
-import { collection, doc, onSnapshot, query } from 'firebase/firestore';
+import { selectFriendsChat } from '../../redux/friendsChat/friendsChatSelector';
+import { handleFriendsChat } from '../../redux/friendsChat/friendsChatAction';
+import { doc, onSnapshot } from 'firebase/firestore';
 import { db } from '../../firebase/firebaseConfig';
 
-const SidebarFriends = ({currentUser}) => {
+const SidebarFriends = ({currentUser, found, setfoundFriend}) => {
 
   const [friend, setFriend] = useState([]);
-  // const [obj, setObj] = useState([]);
+  console.log(found);
 
   useEffect(() => {
     const handleGetChats = () => {
@@ -30,7 +32,7 @@ const SidebarFriends = ({currentUser}) => {
       {Object.entries(friend).map((myFriend) => {
         const {photoURL, username} = myFriend[1].friendInfo;
         return (
-          <div className={classes.founduser} key={myFriend[0]}>
+          <div className={classes.founduser} key={myFriend[0]} onClick={() => setfoundFriend(myFriend[1].friendInfo)} >
             <img
               src={photoURL}
               alt="photo"
@@ -49,6 +51,11 @@ const SidebarFriends = ({currentUser}) => {
 }
  
 const mapStateToProps = createStructuredSelector({
-  currentUser: selectCurrentUser
+  currentUser: selectCurrentUser,
+  found: selectFriendsChat
 });
-export default connect(mapStateToProps)(SidebarFriends);
+const mapDispatchToProps = dispatch => ({
+  setfoundFriend: (friend) => dispatch(handleFriendsChat(friend))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(SidebarFriends);
