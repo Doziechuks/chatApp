@@ -44,24 +44,28 @@ const SidebarSearch = ({ currentUser }) => {
         
         //update currentUsers 'myUserChats' doc
         await updateDoc(doc(db, "myUserChats", currentUser.uid), {
+          [combinedId+'.friendInfo']:{
           uid: foundFriend.uid,
           username: foundFriend.username,
           photoURL: foundFriend.photoURL,
           email: foundFriend.email,
           createdDate: foundFriend.createdDate,
           combinedId,
-          date: serverTimestamp()
+          },
+          [combinedId+'.date']: serverTimestamp(),
         });
 
         //update foundFriends 'myUserChats' doc
         await updateDoc(doc(db, "myUserChats", foundFriend.uid), {
+          [combinedId+'.friendInfo']: {
           uid: currentUser.uid,
           username: currentUser.username,
           photoURL: currentUser.photoURL,
           email: currentUser.email,
           createdDate: currentUser.createdDate,
-          combinedId,
-          date: serverTimestamp(),
+          },
+          [combinedId+'.date']: serverTimestamp(),
+          
         });
       }
     } catch (error) {
@@ -70,8 +74,7 @@ const SidebarSearch = ({ currentUser }) => {
     setFoundFriend(null);
     setUsername('');
   };
-
-  console.log(foundFriend);
+  
   return (
     <div className={classes.container}>
       <div className={classes.searchbox}>

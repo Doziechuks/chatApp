@@ -2,6 +2,7 @@ import classes from './sidebar.module.css';
 
 import SidebarNav from '../sidebarNav/sidebarNav';
 import SidebarSearch from '../sidebarSearch/sidebarSearch';
+import SidebarFriends from '../sidebarFriends/sidebarFriends';
 import MyProfile from '../myProfile/myProfile';
 
 const Sidebar = () => {
@@ -9,6 +10,7 @@ const Sidebar = () => {
     <div className={classes.container}>
       <SidebarNav />
       <SidebarSearch />
+      <SidebarFriends />
       <MyProfile />
     </div>
    );

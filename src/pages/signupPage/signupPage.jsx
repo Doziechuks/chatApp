@@ -32,7 +32,6 @@ const SignupPage = () => {
 
     try {
       const { user } = await createUserWithEmailAndPassword(auth, email, password);
-      console.log(user);
       const storageRef = ref(storage, displayName);
       uploadBytesResumable(storageRef, photo).then(
         () => {
@@ -51,9 +50,8 @@ const SignupPage = () => {
               createdDate,
               username: displayName.split(' ')[0]
             });
-
             await setDoc(doc(db, "myUserChats", user.uid), {});
-            history.push("/letstalk");
+            history.push("/");
           });
         }
       );

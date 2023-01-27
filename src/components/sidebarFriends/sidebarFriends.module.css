@@ -1,0 +1,41 @@
+.container {
+  border: 1px red solid;
+  width: 100%;
+  height: calc(100% - 12%);
+  padding: 0.5rem;
+  background-color: #fff;
+  overflow-y: scroll;
+}
+.founduser {
+  /* border: 1px red solid; */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  border-bottom: 1px solid #f0f2f5;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.founduser:hover {
+  background-color: #f0f2f5;
+}
+.userPhoto {
+  border: 1px red solid;
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+.founduser p {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+.infoBox {
+  width: max-content;
+}
+.infoBox .lastMessage {
+  font-size: 1rem;
+}

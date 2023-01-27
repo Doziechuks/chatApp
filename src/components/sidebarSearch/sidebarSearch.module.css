@@ -19,7 +19,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
 }
 .searchIcon{
   cursor: pointer;
@@ -43,6 +43,7 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem;
+  margin-top: 1rem;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
