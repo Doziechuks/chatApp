@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import SigninPage from './pages/signinPage/signinPage';
 import SignupPage from './pages/signupPage/signupPage';
 import HomePage from './pages/homePage/homePage';
+import Loading from './components/loading/loading';
 
 import { Switch, Route, Redirect, useHistory } from 'react-router-dom';
 
@@ -26,7 +27,6 @@ import {
 
 
 function App({currentUser, errorMessage, isLoading, setCurrentUser, setErrorMessage, setIsLoading}) {
-  // console.log({currentUser, errorMessage, isLoading});
   const history = useHistory()
 
   useEffect(()=> {
@@ -44,10 +44,10 @@ function App({currentUser, errorMessage, isLoading, setCurrentUser, setErrorMess
     return () => unSubscribe();
   }, [])
 
-  // console.log(currentUser);
-  // if(isLoading){
-  //   return <h1>Loading...</h1>
-  // }
+  console.log(currentUser);
+  if(isLoading){
+    return <Loading />
+  }
   return (
     <div className={classes.app}>
       <div className={classes.background} />
