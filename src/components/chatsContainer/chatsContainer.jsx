@@ -14,7 +14,6 @@ import {
 } from "../../redux/profile/profileSelector";
 
 const ChatsContainer = ({ friendProfile, chatContainer }) => {
-  console.log({ friendProfile, chatContainer });
   return (
     <div className={`${classes.container}`}>
       {chatContainer ? (

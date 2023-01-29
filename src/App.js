@@ -44,7 +44,6 @@ function App({currentUser, errorMessage, isLoading, setCurrentUser, setErrorMess
     return () => unSubscribe();
   }, [])
 
-  console.log(currentUser);
   if(isLoading){
     return <Loading />
   }

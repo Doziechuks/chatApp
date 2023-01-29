@@ -20,3 +20,10 @@
   font-size: 2rem;
   color: #4F5F69;
 }
+
+@media screen and (max-width: 650px) {
+  .photo{
+  width: 20rem;
+  height: 10rem;
+}
+}
