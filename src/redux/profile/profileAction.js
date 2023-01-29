@@ -7,3 +7,6 @@ export const handleHideMyProfile = () => ({
 export const handleHideFriendProfile = () => ({
   type: profileActionType.HIDE_FRIEND_PROFILE,
 });
+export const handleShowChatContainer = () => ({
+  type: profileActionType.SHOW_CHATCONTAINER
+});

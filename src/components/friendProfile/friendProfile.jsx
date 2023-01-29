@@ -9,7 +9,6 @@ import { selectFriendsChat } from '../../redux/friendsChat/friendsChatSelector';
 import { handleHideFriendProfile } from "../../redux/profile/profileAction";
 
 const FriendsProfile = ({ friendProfile, friend, setFriendPofile }) => {
-  console.log(friend);
   return (
     <div className={`${classes.container} ${friendProfile && classes.show}`}>
       <div className={classes.myProfileNav}>

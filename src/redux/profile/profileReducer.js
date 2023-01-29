@@ -2,7 +2,8 @@ import { profileActionType } from "./profileActionType";
 
 const INITIAL_STATE = {
   hideMyProfile: false,
-  hideFriendProfile: false
+  hideFriendProfile: false,
+  showChatContainer: false
 }
 
 const profileReducer = (state = INITIAL_STATE, action) => {
@@ -16,6 +17,11 @@ const profileReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         hideFriendProfile: !state.hideFriendProfile
+      }
+    case profileActionType.SHOW_CHATCONTAINER:
+      return {
+        ...state,
+        showChatContainer: true
       }
     default: 
     return state;

@@ -10,3 +10,7 @@ export const selectFriendProfile = createSelector(
   [selectProfile],
   (friendProfile) => friendProfile.hideFriendProfile
 );
+export const selectChatContainer = createSelector(
+  [selectProfile],
+  (chat) => chat.showChatContainer
+);
