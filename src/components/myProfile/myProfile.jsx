@@ -15,7 +15,6 @@ import { updateDoc, doc } from 'firebase/firestore';
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 
 const MyProfile = ({hideMyProfile, setHideMyProfile, currentUser}) => {
-  // console.log(currentUser.photoURL);
   const [photo, setPhoto] = useState(null);
   const [error, setError] = useState(false);
 

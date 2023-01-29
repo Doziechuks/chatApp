@@ -6,3 +6,7 @@ export const selectMyProfile = createSelector(
   [selectProfile],
   (MyProfile) => MyProfile.hideMyProfile
 );
+export const selectFriendProfile = createSelector(
+  [selectProfile],
+  (friendProfile) => friendProfile.hideFriendProfile
+);

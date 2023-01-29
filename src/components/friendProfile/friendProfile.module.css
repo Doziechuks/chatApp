@@ -1,0 +1,145 @@
+.container{
+  border: 1px red solid;
+  width: 40%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translateX(100%);
+  transition: all 0.5s ease-in-out;
+}
+.show{
+  transform: translateX(0);
+}
+.myProfileNav {
+  width: 100%;
+  height: 8rem;
+  background-color: #008069;
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
+}
+.profileicon {
+  width: 100%;
+  max-width: 3rem;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon {
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+.profiletitle {
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  text-transform: capitalize;
+  color: #fff;
+  font-weight: bold;
+}
+.profileInfo {
+  background-color: #fff;
+  width: 100%;
+  height: calc(100% - 8rem);
+}
+.background {
+  width: 100%;
+  height: 13rem;
+  background-color: #eaf2f5;
+  position: relative;
+}
+.label{
+  border-radius: 50%;
+  padding: 1rem;
+  display: flex;
+  background-color: #F3F5F6;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 2rem;
+  bottom: 1rem;
+  cursor: pointer;
+}
+.editIcon{
+  font-size: 1.3rem;
+  color: #008069;
+}
+.profilePhoto {
+  width: 100%;
+  max-width: 8rem;
+  display: block;
+  height: 8rem;
+  border-radius: 50%;
+  object-fit: cover;
+  transform: translateY(-70%);
+  margin: 0 auto;
+}
+.info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  transform: translateY(-30%);
+}
+.info h4 {
+  font-size: 1.7rem;
+  text-transform: capitalize;
+  text-align: center;
+}
+.info p {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .container{
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  left: 0;
+  /* transform: translateX(100%); */
+  /* transition: all 0.5s ease-in-out; */
+}
+.show{
+  transform: translateX(0);
+}
+  .profilePhoto {
+    max-width: 5rem;
+    height: 5rem;
+  }
+  .info {
+    gap: 1rem;
+    padding: 0 0.5rem;
+    transform: translateY(-10%);
+  }
+  .info h4 {
+    font-size: 1.2rem;
+  }
+  .info p {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+
+  .profilePhoto {
+    max-width: 6rem;
+    height: 6rem;
+  }
+  .info {
+    gap: 1rem;
+    padding: 0 0.5rem;
+    transform: translateY(-10%);
+  }
+  .info h4 {
+    font-size: 1.4rem;
+  }
+  .info p {
+    font-size: 1.4rem;
+  }
+}

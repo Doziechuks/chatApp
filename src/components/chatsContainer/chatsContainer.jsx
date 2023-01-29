@@ -3,28 +3,28 @@ import classes from './chatsContainer.module.css';
 import ChatNav from '../chatNav/chatNav';
 import ChatTextInput from '../chatTextInput/chatTextInput';
 import MessageBody from '../messageBody/messageBody';
+import FriendsProfile from '../friendProfile/friendProfile';
 
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
-import { selectFriendsChat } from "../../redux/friendsChat/friendsChatSelector";
+import { selectFriendProfile } from '../../redux/profile/profileSelector';
 
-const ChatsContainer = ({friend}) => {
+const ChatsContainer = ({ friendProfile }) => {
+  console.log(friendProfile);
   return (
-    <div className={classes.container}>
-      {!friend ? (
-        <div>no chats</div>
-      ) : (
-        <div className={classes.box}>
-          <ChatNav />
-          <MessageBody />
-          <ChatTextInput />
-        </div>
-      )}
+    <div className={`${classes.container}`}>
+      <div className={`${classes.box} ${friendProfile && classes.show}`}>
+        <ChatNav />
+        <MessageBody />
+        <ChatTextInput />
+      </div>
+      <FriendsProfile />
     </div>
   );
 }
  
 const mapStateToProps = createStructuredSelector({
-  friend: selectFriendsChat,
+  friendProfile: selectFriendProfile
 });
+
 export default connect(mapStateToProps)(ChatsContainer);
