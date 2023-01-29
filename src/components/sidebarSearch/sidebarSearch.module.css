@@ -1,7 +1,6 @@
 .container{
-  border: 1px red solid;
   width: 100%;
-  /* height: 3.5rem; */
+ 
   padding:  0.7rem;
   display: flex;
   flex-direction: column;
@@ -10,7 +9,6 @@
   border-bottom: 1px solid #F0F2F5 ;
 }
 .searchbox{
-  border: 1px red solid;
   width: 100%;
   height: 2.2rem;
   border-radius: 0.5rem;
@@ -19,7 +17,6 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  /* margin-bottom: 1rem; */
 }
 .searchIcon{
   cursor: pointer;
@@ -38,7 +35,6 @@
 }
 
 .founduser{
-  border: 1px red solid;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -51,7 +47,6 @@
    background-color: #F0F2F5;
 }
 .userPhoto{
-   border: 1px red solid;
   width: 3rem;
   height: 3rem;
   border-radius: 50%;

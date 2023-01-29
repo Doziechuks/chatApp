@@ -1,5 +1,4 @@
 .container{
-  border: 1px red solid;
   width: 100%;
   height: calc(100% - 8rem);
   overflow-y: scroll;

@@ -1,5 +1,4 @@
 .container{
-  border: 1px red solid;
   width: 100%;
   margin-bottom: 1.5rem;
   display: flex;
@@ -9,7 +8,6 @@
   align-items: flex-end;
 }
 .text{
-  border: 1px red solid;
   width: 100%;
   max-width: max-content;
   padding: 0.5rem;
@@ -22,7 +20,6 @@
   border-radius: 0.8rem 0.8rem 0rem 0.8rem;
 }
 .photo{
-  border: 1px red solid;
   width: 100%;
   max-width: 17rem;
   height: 20rem;
