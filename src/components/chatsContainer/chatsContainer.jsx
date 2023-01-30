@@ -23,7 +23,7 @@ const ChatsContainer = ({ friendProfile, chatContainer }) => {
           <ChatTextInput />
         </div>
       ) : (
-       <NoChats />
+        <NoChats />
       )}
       <FriendsProfile />
     </div>

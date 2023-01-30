@@ -14,7 +14,7 @@ import { selectFriendsChat } from "../../redux/friendsChat/friendsChatSelector";
 import { selectCurrentUser } from "../../redux/user/userSelector";
 
 
-const ChatTextInput = ({currentUser, friend}) => {
+const ChatTextInput = ({ currentUser, friend }) => {
   const [text, setText] = useState('');
   const [img, setImg] = useState(null);
   const chatId = Date.now().toString();
@@ -36,6 +36,7 @@ const ChatTextInput = ({currentUser, friend}) => {
               senderId: currentUser.uid,
               date: Timestamp.now(),
               photo: url,
+              time: new Date().toLocaleTimeString(),
             }),
           });
         });
@@ -47,19 +48,20 @@ const ChatTextInput = ({currentUser, friend}) => {
           text,
           senderId: currentUser.uid,
           date: Timestamp.now(),
+          time: new Date().toLocaleTimeString(),
         }),
       });
     };
 
     await updateDoc(doc(db, "myUserChats", currentUser.uid), {
-      [friend.combinedId + '.lastMessage']: {
-        text
+      [friend.combinedId + ".lastMessage"]: {
+        text: `${text.substring(0, 20)}${text.length >= 20 ? '...' : ''}`,
       },
-      [friend.combinedId + '.date']: serverTimestamp()
+      [friend.combinedId + ".date"]: serverTimestamp(),
     });
      await updateDoc(doc(db, "myUserChats", friend.uid), {
        [friend.combinedId + ".lastMessage"]: {
-         text,
+         text: `${text.substring(0, 20)}${text.length >= 20 ? "..." : ''}`,
        },
        [friend.combinedId + ".date"]: serverTimestamp(),
      });

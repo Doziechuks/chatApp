@@ -1,5 +1,5 @@
 import classes from "./messageBody.module.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import Messages from "../messages/messages";
 
@@ -26,7 +26,6 @@ const MessageBody = ({ friend }) => {
     friend.combinedId && handleGetMessage();
   }, [friend.combinedId]);
 
-  // console.log(message);
   return (
     <div className={classes.container}>
       {message && message.map((info, index) => {
