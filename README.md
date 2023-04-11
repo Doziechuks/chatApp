@@ -1,3 +1,41 @@
+# A Realtime Chat App Built With Reactjs and Firestore Database and Firebase Authentication.
+
+The live url link to the project is [chat app](https://letstalk-rho.vercel.app/)
+
+The app is built on web version and standard, however it is fully responsive on mobile screen and other screen sizes.
+
+![home](src/assets/home.png)
+
+### Mini screen view
+
+![tab](src/assets/tab.png)
+
+### Mobile screen view
+
+![mobile-left](src/assets/mobile-left.png)
+![mobile-right](src/assets/mobile-right.png)
+
+The app supports sending of texts and images. Also users can equally change their profile pictures.
+
+users upon opening the url as redirected to the __login page__. A first time user is to create a new account using the __sign up__ redirect.
+
+![login](src/assets/login.png)
+
+having signed in or signed up, user can search for a friend by __typing in their username in lowercase at the search bar provided in the side bar either use the enter key or click on the search icon by the left to find the typed in user.__
+
+![search](src/assets/search.png)
+
+click on the found friend after the search to add to your collection of friends. Having added to your collections, click on the friend to start a realtime chat with the friend.
+
+![chats](src/assets/chat.png)
+
+
+---
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
