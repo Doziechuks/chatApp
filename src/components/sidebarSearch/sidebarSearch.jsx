@@ -79,10 +79,6 @@ const SidebarSearch = ({ currentUser }) => {
   return (
     <div className={classes.container}>
       <div className={classes.searchbox}>
-        <AiOutlineSearch
-          className={classes.searchIcon}
-          onClick={handleSearch}
-        />
         <input
           type="text"
           placeholder="Search or start a new chat"
@@ -90,6 +86,10 @@ const SidebarSearch = ({ currentUser }) => {
           onChange={(e) => setUsername(e.target.value)}
           onKeyDown={handleKey}
           className={classes.search}
+        />
+        <AiOutlineSearch
+          className={classes.searchIcon}
+          onClick={handleSearch}
         />
       </div>
       {error && <p>user not founder</p>}

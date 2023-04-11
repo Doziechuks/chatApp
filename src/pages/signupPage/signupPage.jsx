@@ -48,7 +48,7 @@ const SignupPage = () => {
               email,
               photoURL: url,
               createdDate,
-              username: displayName.split(' ')[0]
+              username: displayName.split(' ')[0].toLowerCase()
             });
             await setDoc(doc(db, "myUserChats", user.uid), {});
             history.push("/");
